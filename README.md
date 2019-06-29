@@ -1,2 +1,2 @@
 # I start shell use.
-cmt test
+cmt test2
