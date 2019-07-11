@@ -1,0 +1,5 @@
+#!/bin/sh
+git config --global user.name "kaede0902"
+git config --global user.email "kaede0920js@gmail.com"
+
+
