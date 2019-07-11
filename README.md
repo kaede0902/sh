@@ -24,9 +24,21 @@ Then run by `./hello.sh`
 
 It returns `Hello shell!!`  
 
-## echo
-### options
+## Linux Commands
+### echo
+Print "string" to the terminal.  
 `echo -e`: enables escape sq  
-sequence: [`\t`,`\n`,`\c`]  
-last `\c` prevent line break  
+    sequence: [`\t`,`\n`,`\c`]  
+    `\c` prevent line break  
+### mv
+move `fileName` to `your/path/here`  
+or `nameBefore` to `nameAfter`  
+### cp
+copy to  `newFileName` to `your/path/here`  
+or `nameBefore` to `copiedFileName`  
+### ln
+ln `Link/to/your/path` `linkFile`??  
+
+### refered
+(http://jade-tools.sourceforge.net/ln/usage.html)_
 
