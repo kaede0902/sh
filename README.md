@@ -7,12 +7,11 @@ Regular prompt is ´$´
 ´finger userName´  
 ´bash --version´  
 ## Dif of C lang
-No compilie, textfiles run, Not binary.
-Easy to culc string. 
-Good for combination of other cmds.
-(It can use shell cmd like
-´cp´, ´echo´ inside!)  
-## min
+No compilie, textfiles run, Not binary.  
+Easy to culc string.   
+Good for combination of other cmds.  
+(It can use shell cmd like ´cp´, ´echo´ inside!)  
+## min usage
 make a file named `hello.sh`  
 and give it a power: `chmod 755 hello.sh`  
 Inside `hello.sh`  
@@ -53,13 +52,29 @@ man cmdName : open the command manual file.
 ### pwd 
 print current dir structure.  
 pwd -P: print symbolic link real structure.  
-#rm 
+### touch
+make file.  
+### rm 
 rm hoge.txt  
 remove the file  
 rmdir foo/  
 remove the empty dir  
 rm -rf hoge  
 remove every thing  
+```
+$ touch hoge.txt; ls
+$ hoge.txt
+$ rmdir
+$ rm hoge.txt; ls
+$ 
+$ mkdir hogedir
+$ rm hogedir/
+$ rm: cannot remove 'hogedir/': Is a directory
+$ rmdir hogedir/; ls
+$ 
+
+
+```
 ### wc
 word count. used in linux command pipeline.  
 `who | wc -l`:  
