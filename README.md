@@ -37,43 +37,31 @@ or `nameBefore` to `nameAfter`
 copy to  `newFileName` to `your/path/here`  
 or `nameBefore` to `copiedFileName`  
 ### ln
-ln `Link/to/your/path` `linkFile`??  
-where: link is the name of the link to be created 
-and file is the name of the file the link will point to,  
+ln -s: make symbolic links.
 for example:
-  `ln c:\my_links\contacts.doc c:\my_files\contacts.doc`
-  `ln c:\my_links\my_dir c:\my_files\my_dir`
-  ` SUCCESS: junction created: c:\my_links\my_dir --> c:\my_files\my_dir`
-  ```
-  kaede@kaede-ThinkPad-T450:/opt/lampp/htdocs$ ln -s workspace/ ~
-  cd ~
-  ls
-  Download/ Desktop/ ... workspace/
-  ```
-`chmod: cannot access 'workspace': Too many levels of symbolic links`  
-What is the dif between `ln` and `ln -s`?
-`ln ...`: ln: workspace/: hard link not allowed for directory  
-
-http://jade-tools.sourceforge.net/ln/usage.html
-#### stack
-For PHP, I am working at /opt/lampp/htdocs, but it's a little far from ~, 
-so I decided to make symbolic link of the htdocs, but an error occured.
 ```
-  kaede@kaede-ThinkPad-T450:/opt/lampp/htdocs$ ln -s workspace/ ~
-  cd ~
-  ls
-  Download/ Desktop/ ... workspace/
+kaede: ~$ ln -s /opt/lampp/htdocs/ws/ .
+kaede: ~$ cdls workspace
+kaede: ~$ hi.php savetest.txt
+kaede: ~$ pwd -P
+kaede: ~$ /opt/lampp/htdocs/ws
 ```
-Here the link was made, but it turned out to be just an empty read only 
-file. 
-I tried to make a hardlink, but the computer sayed  
-`ln: workspace/: hard link not allowed for directory`
-
-How can I make a short cut of the /opt/lampp/htdocs/ ? 
-Please help me..
-
+This create dir alias.  
+(stack link)
+### man 
+man cmdName : open the command manual file. 
+### pwd 
+print current dir structure.  
+pwd -P: print symbolic link real structure.  
+#rm 
+rm hoge.txt  
+remove the file  
+rmdir foo/  
+remove the empty dir  
+rm -rf hoge  
+remove every thing  
 ### wc
-word count.  
+word count. used in linux command pipeline.  
 `who | wc -l`:  
 3
 
