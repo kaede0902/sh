@@ -80,7 +80,25 @@ word count. used in linux command pipeline.
 `who | wc -l`:  3
 
 ### cat
-#### Display file
+#### Create a file
+`cat > fileName`: can create a file  
+with contents. To end, press `<C-d>`
+```sh
+cat > createTest 
+contents below...
+2nd line
+3rd line
+(ctrl d)
+
+cat createTest
+
+contents below...
+2nd line
+3rd line
+```
+a file with contents. 
+
+#### Display files
 Display contents of the file
 ```sh
 cat ../hello.sh
@@ -94,6 +112,11 @@ cat hello hi
 hello every body
 hi world
 ```
+##### Display options
+`cat -n filename`: print with line numbers  
+`cat filename | more`: ??  
+`cat filename | less`: hide all but contents  
+`cat -e filename`: print with $ mark at the end  
 #### join 2 files
 `cat hoge >> foo`:  
 join hoge content to foo's end  
