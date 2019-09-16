@@ -64,7 +64,8 @@ remove every thing
 ```
 $ touch hoge.txt; ls
 $ hoge.txt
-$ rmdir
+$ rmdir hoge.txt
+$ rmdir: failed to remote 'txt': Not a directory
 $ rm hoge.txt; ls
 $ 
 $ mkdir hogedir
@@ -73,12 +74,35 @@ $ rm: cannot remove 'hogedir/': Is a directory
 $ rmdir hogedir/; ls
 $ 
 
-
 ```
 ### wc
 word count. used in linux command pipeline.  
-`who | wc -l`:  
-3
+`who | wc -l`:  3
+
+### cat
+#### Display file
+Display contents of the file
+```sh
+cat ../hello.sh
+
+#!/bin/sh
+echo 'Hello'
+```
+It can display multi files
+```sh
+cat hello hi
+hello every body
+hi world
+```
+#### join 2 files
+`cat hoge >> foo`:  
+join hoge content to foo's end  
+```sh
+cat hello >> hi
+cat hi
+hi world
+hello every body
+```
 
 ### refered
 
