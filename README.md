@@ -77,9 +77,24 @@ $
 ```
 ### wc
 word count. used in linux command pipeline.  
-`who | wc -l`:  3
+`who | wc`: 5 25 264  
+`who | wc -l`:  5  
+### sort
+sort results.  
+```sh
+cat num3 num2 num1
+3 2 1 
+cat num3 num2 num1 | sort
+1 2 3 
+```
 
 ### cat
+#### Usage
+Create a file with contents  
+Print the files contents  
+Join 2 files  
+Overwrite a file by one file  
+
 #### Create a file
 `cat > fileName`: can create a file  
 with contents. To end, press `<C-d>`
@@ -114,17 +129,62 @@ hi world
 ```
 ##### Display options
 `cat -n filename`: print with line numbers  
-`cat filename | more`: ??  
-`cat filename | less`: hide all but contents  
+```sh
+cat songs
+"Heal The World"
+There's A Place In
+Your Heart
+
+cat -n songs
+    1    "Heal The World"
+    2    There's A Place In
+    3    Your Heart
+```
 `cat -e filename`: print with $ mark at the end  
-#### join 2 files
-`cat hoge >> foo`:  
+```sh
+cat -e songs
+"Heal The World"$
+There's A Place In$
+Your Heart$
+```
+`cat -T filename`: change tab to `^I`  
+but it will not work now...  
+`cat filename | more`: default??  
+`cat filename | less`: hide all but contents  
+
+#### join file1 contents to the file2's end
+`cat hoge >> foo`:   
 join hoge content to foo's end  
 ```sh
 cat hello >> hi
 cat hi
 hi world
 hello every body
+```
+#### join 3 files to one new file
+`cat file1 file2 file3 > newfile`: 
+newfile include file1 ~ 3 's contents.  
+```sh
+cat hi hello songs > hihellosongs
+cat hihellosongs
+
+hi world
+hello everybody
+"Heal The World"
+There's A Place In
+Your Heart
+```
+#### overwrite a file by a file
+`cat originFile > writtenFile`: 
+Overwrite writtenFile by originFile  
+```sh
+cat hi hello
+hi world
+hello everybody
+cat hi > hello 
+cat hi hello
+hi world
+hello everybody
 ```
 
 ### refered
