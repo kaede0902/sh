@@ -3,19 +3,34 @@
 Bourne Again Shell.  
 Regular prompt is ´$´  
 ## Search your environment
-´echo $SHELL´  
-´finger userName´  
-´bash --version´  
+Define your info by shell command!!!  
+```sh
+echo $SHELL  
+/bin/bash
+finger kaede
+Login: kaede    Name: KAEDE
+Dir: /Users/kaede   shell: /bin/bash/
+on Since ....
+No Mail.
+No Plan.
+
+bash --version
+GNU bash, version 3.7.75(1)-release(x86_64-apple-darwin18)........
+
+```
 ## Dif of C lang
-No compilie, textfiles run, Not binary.  
-Easy to culc string.   
+Shell Script is different from C language.  
+* No compilie, textfiles run, Not binary.  
+* Easy to culc string.   
+// write example  
 Good for combination of other cmds.  
 (It can use shell cmd like ´cp´, ´echo´ inside!)  
-## min usage
-make a file named `hello.sh`  
-and give it a power: `chmod 755 hello.sh`  
-Inside `hello.sh`  
-```
+## Min tutorial
+Open Your Termninal App.  
+Make a file named `hello.sh`  
+And give it a power: `chmod 755 hello.sh`  
+Write inside `hello.sh`  
+```sh
 #!/bin/sh
 echo 'Hello shell!!'
 ```
@@ -55,13 +70,16 @@ pwd -P: print symbolic link real structure.
 ### touch
 make file.  
 ### rm 
+```sh
 rm hoge.txt  
-remove the file  
+# remove the file  
 rmdir foo/  
-remove the empty dir  
+# remove the empty dir  
 rm -rf hoge  
-remove every thing  
+# remove every thing  
 ```
+
+```sh
 $ touch hoge.txt; ls
 $ hoge.txt
 $ rmdir hoge.txt
