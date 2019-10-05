@@ -15,7 +15,7 @@ No Mail.
 No Plan.
 
 bash --version
-GNU bash, version 3.7.75(1)-release(x86_64-apple-darwin18)........
+GNU bash, version 3.7.75(1)-release(x86_64-apple-darwin18)......
 
 ```
 ## Dif of C lang
