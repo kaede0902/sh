@@ -87,12 +87,12 @@ cat num3 num2 num1
 cat num3 num2 num1 | sort
 1 2 3 
 ```
-
+-------------------------------------------
 ### cat
 #### Usage
 Create a file with contents  
 Print the files contents  
-Join 2 files  
+Join 2 or more files  
 Overwrite a file by one file  
 
 #### Create a file
