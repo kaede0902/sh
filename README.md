@@ -204,6 +204,23 @@ cat hi hello
 hi world
 hello everybody
 ```
+## find
+https://www.linode.com/docs/tools-reference/tools/find-files-in-linux-using-the-command-line/
+* find files or dir.
+### -name
+* `find DirName -name 'fileName'`
+
+```sh
+find -name 'git'
+./env/git
+find . -name 'git'
+./env/git
+find . -name '*git*'
+./env/git
+./env/git/git_ssh.md
+./env/git/jp.gitcheat.md
+./env/git/gitcheat.md
+```
 
 ### refered
 
